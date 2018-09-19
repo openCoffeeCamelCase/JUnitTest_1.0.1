@@ -17,13 +17,13 @@ public class BufferedWriterTest {
             fr = new FileWriter(file);
             br = new BufferedWriter(fr);
             br.write(expectedString);
-        } catch (IOException e) {
+        } catch (Exception e) {
             fail(e.getMessage());
         }finally{
             try {
                 br.close();
                 fr.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 fail(e.getMessage());
             }
         }
@@ -59,13 +59,13 @@ public class BufferedWriterTest {
             int off =0;
             int len = expectedString.length();
             br.write(expectedString.toCharArray(), off, len);
-        } catch (IOException e) {
+        } catch (Exception e) {
             fail(e.getMessage());
         }finally{
             try {
                 br.close();
                 fr.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 fail(e.getMessage());
             }
         }
@@ -85,13 +85,13 @@ public class BufferedWriterTest {
             int off =0;
             int len = expectedString.length();
             br.write(expectedString, off, len);
-        } catch (IOException e) {
+        } catch (Exception e) {
             fail(e.getMessage());
         }finally{
             try {
                 br.close();
                 fr.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 fail(e.getMessage());
             }
         }
@@ -111,13 +111,13 @@ public class BufferedWriterTest {
             br.write(string);
             br.newLine();
             br.write(string);
-        } catch (IOException e) {
+        } catch (Exception e) {
             fail(e.getMessage());
         }finally{
             try {
                 br.close();
                 fr.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 fail(e.getMessage());
             }
         }
